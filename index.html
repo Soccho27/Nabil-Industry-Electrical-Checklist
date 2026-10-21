@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>নাবিল ইন্ডাস্ট্রিয়াল পার্ক - ইলেকট্রিক্যাল মেইন্টেনেন্স চেকলিস্ট</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Hind Siliguri', 'Noto Sans Bengali', 'Inter', sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+    .reason-tab-enter {
+      animation: slideDown 0.22s ease-out forwards;
+    }
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @page {
+      size: A4 portrait;
+      margin: 6mm 8mm;
+    }
+    @media print {
+      html, body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body > *:not(main) {
+        display: none !important;
+      }
+      main {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .print-header-block {
+        text-align: center !important;
+        border-bottom: 2px solid #0f172a !important;
+        padding-bottom: 6px !important;
+        margin-bottom: 8px !important;
+      }
+      .print-header-title {
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+      }
+      .print-header-sub {
+        font-size: 11px !important;
+        margin: 2px 0 4px 0 !important;
+      }
+      .print-header-badge {
+        display: inline-block !important;
+        border: 1.5px solid #0f172a !important;
+        padding: 2px 10px !important;
+        border-radius: 4px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        background-color: #f1f5f9 !important;
+      }
+      .print-q21-box {
+        margin-top: 6px !important;
+        padding: 5px 8px !important;
+        border: 1px solid #475569 !important;
+        border-radius: 4px !important;
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      #reportModalOverlay {
+        position: static !important;
+        inset: auto !important;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+      }
+      .print-sheet {
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow: visible !important;
+      }
+      #printableReportBody {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .print-one-page-box {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        padding: 10px 12px !important;
+        border-width: 1.5px !important;
+      }
+      .print-compact-table th,
+      .print-compact-table td {
+        padding-top: 2.5px !important;
+        padding-bottom: 2.5px !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        font-size: 10.5px !important;
+        line-height: 1.2 !important;
+      }
+      .print-checkbox-box {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 14px !important;
+        height: 14px !important;
+        font-size: 10px !important;
+        line-height: 1 !important;
+        border: 1px solid #334155 !important;
+        border-radius: 3px !important;
+        vertical-align: middle !important;
+      }
+      .print-checkbox-checked {
+        border: 1.8px solid #000000 !important;
+        background-color: #e2e8f0 !important;
+        color: #000000 !important;
+        font-weight: 800 !important;
+      }
+      .print-checkbox-unchecked {
+        border: 1px solid #94a3b8 !important;
+        color: transparent !important;
+      }
+      .print-compact-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        border: 1px solid #475569 !important;
+      }
+      .print-compact-table th,
+      .print-compact-table td {
+        border: 1px solid #94a3b8 !important;
+      }
+      .print-meta-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        font-size: 11.5px !important;
+        margin-bottom: 6px !important;
+        padding-bottom: 5px !important;
+        border-bottom: 1px solid #94a3b8 !important;
+      }
+      .print-footer-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        font-size: 11px !important;
+        margin-top: 10px !important;
+        padding-top: 6px !important;
+        border-top: 1px solid #94a3b8 !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-slate-900 text-white shadow-md sticky top-0 z-30 no-print">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950 font-bold shadow-sm shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-base sm:text-lg font-bold leading-tight tracking-tight">নাবিল ইন্ডাস্ট্রিয়াল পার্ক</h1>
+          <p class="text-xs text-slate-300">ভেড়াপোড়া, পবা, রাজশাহী • ইলেকট্রিক্যাল মেইন্টেনেন্স চেক লিস্ট</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <!-- Language Switcher -->
+        <button id="btnLangToggle" type="button" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-medium text-slate-200 border border-slate-700 transition">
+          ভাষা: বাংলা + EN
+        </button>
+
+        <!-- Main View Tabs -->
+        <div class="inline-flex rounded-lg bg-slate-800 p-1 border border-slate-700">
+          <button id="navChecklistBtn" type="button" class="px-3 py-1 rounded-md text-xs font-semibold bg-amber-500 text-slate-950 transition">
+            দৈনিক চেকলিস্ট
+          </button>
+          <button id="navHistoryBtn" type="button" class="px-3 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-white transition flex items-center gap-1">
+            <span>পূর্ববর্তী রেকর্ড</span>
+            <span id="historyCountBadge" class="px-1.5 py-0.2 bg-slate-700 text-amber-400 rounded-full text-[11px]">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Toast Notification -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 hidden no-print">
+    <div id="toastBox" class="flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-lg bg-slate-900 text-white text-sm font-medium border border-slate-700">
+      <span id="toastIcon" class="text-amber-400">●</span>
+      <span id="toastText">বার্তা</span>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-6">
+
+    <!-- ==================== VIEW 1: STEP 1 - INITIAL SETUP (PROJECT, SHIFT, DATE) ==================== -->
+    <section id="setupStepView" class="max-w-xl mx-auto no-print">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 px-6 py-6 text-white">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold mb-2">
+            ধাপ ১ / ২ • দৈনিক তথ্য প্রদান (Daily Session Setup)
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold">নতুন দৈনিক চেকলিস্ট শুরু করুন</h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">
+            প্রথমে আজকের প্রজেক্টের নাম, আপনার শিফট এবং তারিখ নির্বাচন করুন। এরপর চেকলিস্টের প্রশ্নগুলো একে একে আসবে।
+          </p>
+        </div>
+
+        <form id="setupForm" class="p-6 space-y-5">
+          <!-- Project Name -->
+          <div>
+            <label for="inputProjectName" class="block text-sm font-bold text-slate-800 mb-1.5">
+              ১. প্রজেক্টের নাম (Project Name) <span class="text-red-500">*</span>
+            </label>
+            <input
+              id="inputProjectName"
+              type="text"
+              required
+              placeholder="প্রজেক্ট বা ইউনিটের নাম লিখুন (যেমন: ফ্লাওয়ার মিল - ১, ফিড মিল, অয়েল রিফাইনারি...)"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none text-sm transition"
+            />
+            <!-- Quick Preset Chips -->
+            <div class="mt-2">
+              <span class="text-xs text-slate-500 block mb-1.5">দ্রুত নির্বাচন (Quick Select Project):</span>
+              <div id="projectPresetContainer" class="flex flex-wrap gap-1.5">
+                <button type="button" data-project="নাবিল ফ্লাওয়ার মিল" class="project-chip px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 hover:bg-amber-100 hover:text-amber-900 text-slate-700 border border-slate-200 transition">নাবিল ফ্লাওয়ার মিল</button>
+                <button type="button" data-project="নাবিল ফিড মিল" class="project-chip px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 hover:bg-amber-100 hover:text-amber-900 text-slate-700 border border-slate-200 transition">নাবিল ফিড মিল</button>
+                <button type="button" data-project="নাবিল অটো রাইস মিল" class="project-chip px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 hover:bg-amber-100 hover:text-amber-900 text-slate-700 border border-slate-200 transition">নাবিল অটো রাইস মিল</button>
+                <button type="button" data-project="নাবিল ডাল ও পালস মিল" class="project-chip px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 hover:bg-amber-100 hover:text-amber-900 text-slate-700 border border-slate-200 transition">নাবিল ডাল ও পালস মিল</button>
+                <button type="button" data-project="নাবিল এডিবল অয়েল প্লান্ট" class="project-chip px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 hover:bg-amber-100 hover:text-amber-900 text-slate-700 border border-slate-200 transition">নাবিল এডিবল অয়েল প্লান্ট</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shift Selection -->
+          <div>
+            <label class="block text-sm font-bold text-slate-800 mb-1.5">
+              ২. শিফট নির্বাচন করুন (Select Shift) <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <button
+                type="button"
+                id="shiftBtnA"
+                data-shift="A (8am-8pm)"
+                class="shift-option-btn flex items-center gap-3 p-3.5 rounded-xl border-2 border-amber-500 bg-amber-50/70 text-left transition"
+              >
+                <div class="w-9 h-9 rounded-lg bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0">A</div>
+                <div>
+                  <div class="font-bold text-sm text-slate-900">শিফট A (ডে শিফট)</div>
+                  <div class="text-xs text-slate-600 font-medium">8am - 8pm (সকাল ৮টা - রাত ৮টা)</div>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                id="shiftBtnB"
+                data-shift="B (8pm-8am)"
+                class="shift-option-btn flex items-center gap-3 p-3.5 rounded-xl border-2 border-slate-200 bg-white hover:bg-slate-50 text-left transition"
+              >
+                <div class="w-9 h-9 rounded-lg bg-slate-200 text-slate-700 font-bold flex items-center justify-center shrink-0">B</div>
+                <div>
+                  <div class="font-bold text-sm text-slate-900">শিফট B (নাইট শিফট)</div>
+                  <div class="text-xs text-slate-600 font-medium">8pm - 8am (রাত ৮টা - সকাল ৮টা)</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Date & Technician Name -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="inputCheckDate" class="block text-sm font-bold text-slate-800 mb-1.5">
+                ৩. তারিখ (Date) <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="inputCheckDate"
+                type="date"
+                required
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none text-sm transition"
+              />
+            </div>
+
+            <div>
+              <label for="inputEmployeeName" class="block text-sm font-bold text-slate-800 mb-1.5">
+                ৪. দায়িত্বপ্রাপ্ত কর্মচারী (Employee - ঐচ্ছিক)
+              </label>
+              <input
+                id="inputEmployeeName"
+                type="text"
+                placeholder="আপনার নাম / আইডি (ঐচ্ছিক)"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none text-sm transition"
+              />
+            </div>
+          </div>
+
+          <!-- Info Callout -->
+          <div class="p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-900 flex items-start gap-2.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            </svg>
+            <div>
+              <span class="font-bold">নির্দেশনা:</span> চেকলিস্টে যেকোনো প্রশ্নে <span class="font-bold text-amber-700">"হ্যাঁ (Yes)"</span> নির্বাচন করলে সাথে সাথে নিচে একটি <span class="font-bold">কারণ উল্লেখ করার ট্যাব (Reason Declaration Tab)</span> খুলে যাবে, যেখানে কারণ লিখতে হবে। <span class="font-bold text-emerald-700">"না (No)"</span> নির্বাচন করলে কারণ লেখার প্রয়োজন নেই।
+            </div>
+          </div>
+
+          <div id="setupErrorMsg" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-xs font-semibold text-red-700"></div>
+
+          <button
+            type="submit"
+            class="w-full py-3.5 px-5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition"
+          >
+            <span>চেকলিস্ট প্রশ্ন শুরু করুন (Start Checklist Questions)</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: STEP 2 - ACTIVE CHECKLIST QUESTIONS ==================== -->
+    <section id="checklistQuestionsView" class="hidden space-y-5 no-print">
+
+      <!-- Active Session Metadata Banner -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 flex-1">
+            <div class="bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/80">
+              <div class="text-[11px] text-slate-500 font-medium">প্রজেক্টের নাম (Project)</div>
+              <div id="bannerProjectName" class="text-sm font-bold text-slate-900 truncate">—</div>
+            </div>
+            <div class="bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/80">
+              <div class="text-[11px] text-slate-500 font-medium">শিফট (Shift)</div>
+              <div id="bannerShift" class="text-sm font-bold text-amber-700">—</div>
+            </div>
+            <div class="bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/80">
+              <div class="text-[11px] text-slate-500 font-medium">তারিখ (Date)</div>
+              <div id="bannerDate" class="text-sm font-bold text-slate-900">—</div>
+            </div>
+            <div class="bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/80">
+              <div class="text-[11px] text-slate-500 font-medium">অগ্রগতি (Progress)</div>
+              <div class="flex items-center gap-2">
+                <span id="bannerProgressText" class="text-sm font-bold text-emerald-700">0 / 20</span>
+                <span id="bannerYesCountBadge" class="text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-semibold">হ্যাঁ: 0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button
+              id="btnEditSessionInfo"
+              type="button"
+              class="px-3 py-2 rounded-xl border border-slate-300 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition"
+            >
+              প্রজেক্ট/শিফট পরিবর্তন
+            </button>
+            <button
+              id="btnResetDailyForm"
+              type="button"
+              class="px-3 py-2 rounded-xl border border-red-200 bg-red-50 hover:bg-red-100 text-xs font-semibold text-red-700 transition"
+            >
+              নতুন ফর্ম রিসেট
+            </button>
+          </div>
+        </div>
+
+        <!-- Progress Bar & Mode Switcher -->
+        <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex-1 min-w-[200px]">
+            <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+              <div id="progressBarFill" class="h-full bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-500 font-medium">প্রদর্শন মোড:</span>
+            <div class="inline-flex rounded-lg bg-slate-100 p-1 border border-slate-200">
+              <button id="modeAllBtn" type="button" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-slate-900 shadow-sm transition">
+                সব প্রশ্ন একসাথে (All 21)
+              </button>
+              <button id="modeWizardBtn" type="button" class="px-2.5 py-1 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900 transition">
+                একটি করে প্রশ্ন (Step-by-Step)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills (shown in All Questions mode) -->
+      <div id="categoryFilterBar" class="flex items-center gap-2 overflow-x-auto pb-1">
+        <!-- Dynamically rendered category pills -->
+      </div>
+
+      <!-- Validation Banner -->
+      <div id="checklistValidationBanner" class="hidden p-4 rounded-xl bg-red-50 border border-red-300 text-red-800 text-xs sm:text-sm font-medium"></div>
+
+      <!-- Questions Container -->
+      <div id="questionsListContainer" class="space-y-4">
+        <!-- Dynamically rendered questions -->
+      </div>
+
+      <!-- Step-by-Step Wizard Controls (shown only in Wizard Mode) -->
+      <div id="wizardControlsBar" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-4 flex items-center justify-between gap-3">
+        <button
+          id="btnPrevQuestion"
+          type="button"
+          class="px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-xs sm:text-sm font-semibold text-slate-700 disabled:opacity-40 transition"
+        >
+          ← পূর্ববর্তী প্রশ্ন (Previous)
+        </button>
+        <div id="wizardStepIndicator" class="text-xs sm:text-sm font-bold text-slate-700">
+          প্রশ্ন ১ / ২১
+        </div>
+        <button
+          id="btnNextQuestion"
+          type="button"
+          class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold transition"
+        >
+          পরবর্তী প্রশ্ন (Next) →
+        </button>
+      </div>
+
+      <!-- Question 21: Other Problems (অন্যান্য কোন সমস্যা থাকলে লিখুনঃ) -->
+      <div id="q21Container" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-bold mb-1">প্রশ্ন ২১ • অতিরিক্ত মন্তব্য</span>
+            <h3 class="text-base font-bold text-slate-900">২১. অন্যান্য কোন সমস্যা থাকলে লিখুনঃ</h3>
+            <p class="text-xs text-slate-500 subtitle-en">21. Write if there are any other electrical or maintenance issues (Optional):</p>
+          </div>
+        </div>
+        <textarea
+          id="inputQ21Remarks"
+          rows="3"
+          placeholder="অন্যান্য কোনো সমস্যা, পর্যবেক্ষণ বা মন্তব্য থাকলে এখানে বিস্তারিত লিখুন..."
+          class="w-full mt-2 px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none text-sm transition"
+        ></textarea>
+      </div>
+
+      <!-- Bottom Submit & Action Bar -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3">
+        <div class="text-xs text-slate-600">
+          <span class="font-bold text-slate-900">টিপস:</span> যেসব প্রশ্নে <span class="font-semibold text-amber-700">"হ্যাঁ"</span> দিয়েছেন সেগুলোর কারণ ট্যাব পূরণ করা বাধ্যতামূলক।
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button
+            id="btnPreviewReport"
+            type="button"
+            class="px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-xs sm:text-sm font-semibold text-slate-800 transition"
+          >
+            প্রিন্ট প্রিভিউ দেখুন (Official Form Preview)
+          </button>
+          <button
+            id="btnSubmitDailyChecklist"
+            type="button"
+            class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-sm transition flex items-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>চেকলিস্ট সংরক্ষণ করুন (Save Daily Checklist)</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== VIEW 3: HISTORY & DAILY RECORDS ==================== -->
+    <section id="historyView" class="hidden space-y-5 no-print">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">সংরক্ষিত দৈনিক চেকলিস্ট রেকর্ড (Daily Saved Records)</h2>
+            <p class="text-xs text-slate-500">প্রতিদিনের প্রজেক্ট, শিফট, তারিখ এবং সিদ্ধান্ত/কারণগুলোর তালিকা এখানে সংরক্ষিত থাকে।</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button
+              id="btnExportCsv"
+              type="button"
+              class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition"
+            >
+              CSV ডাউনলোড করুন
+            </button>
+            <button
+              id="btnStartNewFromHistory"
+              type="button"
+              class="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition"
+            >
+              + নতুন দৈনিক চেকলিস্ট
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+          <div>
+            <label for="filterHistoryProject" class="block text-xs font-semibold text-slate-600 mb-1">প্রজেক্ট খুঁজুন</label>
+            <input id="filterHistoryProject" type="text" placeholder="প্রজেক্টের নাম..." class="w-full px-3 py-1.5 rounded-lg border border-slate-300 text-xs outline-none" />
+          </div>
+          <div>
+            <label for="filterHistoryShift" class="block text-xs font-semibold text-slate-600 mb-1">শিফট ফিল্টার</label>
+            <select id="filterHistoryShift" class="w-full px-3 py-1.5 rounded-lg border border-slate-300 text-xs outline-none bg-white">
+              <option value="ALL">সকল শিফট (All Shifts)</option>
+              <option value="A (8am-8pm)">শিফট A (8am-8pm)</option>
+              <option value="B (8pm-8am)">শিফট B (8pm-8am)</option>
+            </select>
+          </div>
+          <div>
+            <label for="filterHistoryDate" class="block text-xs font-semibold text-slate-600 mb-1">তারিখ ফিল্টার</label>
+            <input id="filterHistoryDate" type="date" class="w-full px-3 py-1.5 rounded-lg border border-slate-300 text-xs outline-none bg-white" />
+          </div>
+        </div>
+
+        <div id="historyRecordsList" class="space-y-3">
+          <!-- Dynamically populated history cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODAL: OFFICIAL PRINT / REPORT SHEET VIEW ==================== -->
+    <div id="reportModalOverlay" class="fixed inset-0 z-50 bg-slate-900/70 hidden overflow-y-auto p-3 sm:p-6">
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden print-sheet">
+        <!-- Modal Action Bar (Hidden in Print) -->
+        <div class="bg-slate-900 text-white px-5 py-3.5 flex flex-wrap items-center justify-between gap-3 no-print">
+          <div class="text-sm font-bold">অফিসিয়াল চেকলিস্ট রিপোর্ট প্রিভিউ (Official Checklist Sheet)</div>
+          <div class="flex items-center gap-2">
+            <button
+              id="btnPrintSheet"
+              type="button"
+              class="px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition"
+            >
+              প্রিন্ট / PDF সেভ করুন (Print)
+            </button>
+            <button
+              id="btnCloseReportModal"
+              type="button"
+              class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition"
+            >
+              বন্ধ করুন ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Printable Content matching the original Nabil Industrial Park Checklist layout -->
+        <div id="printableReportBody" class="p-6 sm:p-8 text-slate-900">
+          <!-- Dynamically populated print table -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // ==================== CHECKLIST QUESTIONS DATA (Exact 20 Yes/No Questions + Q21 from PDF) ====================
+    const CATEGORIES = [
+      { id: 'ALL', bn: 'সকল বিভাগ (All)', en: 'All Sections' },
+      { id: 'substation', bn: 'সাব-স্টেশন', en: 'Sub-Station' },
+      { id: 'compressor', bn: 'কম্প্রেসর মেশিন', en: 'Compressor Machine' },
+      { id: 'mill', bn: 'মিল/ফ্যাক্টরী', en: 'Mill / Factory' },
+      { id: 'generator', bn: 'জেনারেটর', en: 'Generator' },
+      { id: 'breakdown', bn: 'ইলেকট্রিক্যাল ফল্ট ব্রেক ডাউন', en: 'Electrical Fault Breakdown' }
+    ];
+
+    const QUESTIONS = [
+      // সাব-স্টেশন (Sub-Station)
+      {
+        id: 1,
+        numBn: '১',
+        category: 'substation',
+        categoryBn: 'সাব-স্টেশন',
+        bn: 'সাব-স্টেশনের ডিভাইজ গুলোতে কোন সমস্যা আছে কিনা',
+        en: 'Are there any issues with the sub-station devices?',
+        reasonPromptBn: 'ডিভাইজের সমস্যার কারণ ও বিবরণ লিখুন (Declare Reason):',
+        quickReasons: ['ব্রেকার ট্রিপ করেছে', 'রিলে সিগন্যাল ফল্ট', 'ভোল্টেজ ওঠানামা করছে', 'ইনসুলেশন ত্রুটি দেখা গেছে']
+      },
+      {
+        id: 2,
+        numBn: '২',
+        category: 'substation',
+        categoryBn: 'সাব-স্টেশন',
+        bn: 'মেইন ক্যাবল অতিরিক্ত গরম হয়েছে কিনা',
+        en: 'Is the main cable overheated?',
+        reasonPromptBn: 'মেইন ক্যাবল গরম হওয়ার কারণ ও তাপমাত্রা উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['অতিরিক্ত লোড চলছে', 'লুজ টার্মিনেশন/লগ গরম', 'ভেন্টিলেশন সমস্যা', 'অ্যাম্বিয়েন্ট তাপমাত্রা বেশি']
+      },
+      {
+        id: 3,
+        numBn: '৩',
+        category: 'substation',
+        categoryBn: 'সাব-স্টেশন',
+        bn: 'পাওয়ার ফ্যাক্টরের মান ঠিক আছে কিনা',
+        en: 'Is the power factor value okay?',
+        reasonPromptBn: 'পাওয়ার ফ্যাক্টরের বর্তমান মান ও কারণ উল্লেখ করুন (Declare Reason / Reading):',
+        quickReasons: ['বর্তমান মান ০.৯৮ (স্বাভাবিক)', 'ক্যাপাসিটর ব্যাংক সচল আছে', 'অটো কন্ট্রোলার ঠিকমতো কাজ করছে', 'ক্যাপাসিটর ইউনিট চেক করা হয়েছে']
+      },
+      {
+        id: 4,
+        numBn: '৪',
+        category: 'substation',
+        categoryBn: 'সাব-স্টেশন',
+        bn: 'প্যানেল বোর্ড পরিষ্কার পরিচ্ছন্ন আছে কিনা',
+        en: 'Is the panel board clean and tidy?',
+        reasonPromptBn: 'প্যানেল বোর্ড পরিষ্কার-পরিচ্ছন্নতার বিবরণ বা কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['আজ ব্লোয়ার দিয়ে পরিষ্কার করা হয়েছে', 'ডাস্ট ফ্রি ও শুষ্ক অবস্থায় আছে', 'সকল কেবল ড্রেসিং ঠিক আছে']
+      },
+
+      // কম্প্রেসর মেশিন (Compressor Machine)
+      {
+        id: 5,
+        numBn: '৫',
+        category: 'compressor',
+        categoryBn: 'কম্প্রেসর মেশিন',
+        bn: 'টেম্পারেচার ঠিক আছে কিনা',
+        en: 'Is the compressor temperature okay?',
+        reasonPromptBn: 'টেম্পারেচারের বর্তমান রিডিং বা কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['স্বাভাবিক তাপমাত্রায় চলছে (৭৫°C এর নিচে)', 'কুলিং ফ্যান ও অয়েল লেভেল ঠিক আছে', 'সেন্সর রিডিং যাচাইকৃত']
+      },
+      {
+        id: 6,
+        numBn: '৬',
+        category: 'compressor',
+        categoryBn: 'কম্প্রেসর মেশিন',
+        bn: 'কম্প্রেসর মেশিনের মটর অতিরিক্ত গরম হয়েছে কিনা',
+        en: 'Is the compressor machine motor overheated?',
+        reasonPromptBn: 'কম্প্রেসর মটর অতিরিক্ত গরম হওয়ার কারণ লিখুন (Declare Reason):',
+        quickReasons: ['বেয়ারিং ঘর্ষণ/গ্রিজিং প্রয়োজন', 'কুলিং ফ্যানে ধুলা জমেছে', 'একটানা অতিরিক্ত প্রেসার লোড', 'ভোল্টেজ ইমব্যালেন্স']
+      },
+      {
+        id: 7,
+        numBn: '৭',
+        category: 'compressor',
+        categoryBn: 'কম্প্রেসর মেশিন',
+        bn: 'মটরের এম্পিয়ার ঠিক আছে কিনা',
+        en: 'Is the motor ampere okay?',
+        reasonPromptBn: 'মটরের এম্পিয়ার রিডিং ও বিবরণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['রেটেড এম্পিয়ারের মধ্যে আছে', '৩-ফেজ ব্যালেন্সড লোড আছে', 'ক্ল্যাম্প মিটার দিয়ে মাপা হয়েছে']
+      },
+      {
+        id: 8,
+        numBn: '৮',
+        category: 'compressor',
+        categoryBn: 'কম্প্রেসর মেশিন',
+        bn: 'এয়ার ড্রায়ার চলছে কিনা',
+        en: 'Is the air dryer running?',
+        reasonPromptBn: 'এয়ার ড্রায়ার স্ট্যাটাস ও কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['স্বাভাবিকভাবে চালু আছে', 'ড্রেন ভালভ ও ডিউ পয়েন্ট ঠিক আছে', 'প্রোডাকশন লাইনের সাথে চলমান']
+      },
+      {
+        id: 9,
+        numBn: '৯',
+        category: 'compressor',
+        categoryBn: 'কম্প্রেসর মেশিন',
+        bn: 'লাইন ফিল্টার গুলো ঠিক মত কাজ করছে কিনা',
+        en: 'Are the line filters working properly?',
+        reasonPromptBn: 'লাইন ফিল্টারের অবস্থা ও কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['প্রেসার ড্রপ নেই, পরিষ্কার আছে', 'ময়েশ্চার সেপারেটর ঠিকমতো কাজ করছে', 'ফিল্টার কার্ট্রিজ চেক করা হয়েছে']
+      },
+
+      // মিল/ফ্যাক্টরী (Mill / Factory)
+      {
+        id: 10,
+        numBn: '১০',
+        category: 'mill',
+        categoryBn: 'মিল/ফ্যাক্টরী',
+        bn: 'সকল মটর রানিং আছে কিনা',
+        en: 'Are all motors running?',
+        reasonPromptBn: 'রানিং মটরগুলোর স্ট্যাটাস ও কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['শিডিউল অনুযায়ী সকল মটর সচল আছে', 'প্রোডাকশন লাইন ফুল লোডে চলছে', 'কোনো অস্বাভাবিক শব্দ বা ভাইব্রেশন নেই']
+      },
+      {
+        id: 11,
+        numBn: '১১',
+        category: 'mill',
+        categoryBn: 'মিল/ফ্যাক্টরী',
+        bn: 'কোন মটর অতিরিক্ত গরম হয়েছে কিনা',
+        en: 'Is any motor overheated?',
+        reasonPromptBn: 'কোন মটরটি এবং কী কারণে অতিরিক্ত গরম হয়েছে তা লিখুন (Declare Reason):',
+        quickReasons: ['ওভারলোড প্রোডাকশন ফিড', 'মটর ফ্যান কভার জ্যাম', 'বেয়ারিং ত্রুটি দেখা দিয়েছে', 'কয়েল ইনসুলেশন দুর্বল']
+      },
+      {
+        id: 12,
+        numBn: '১২',
+        category: 'mill',
+        categoryBn: 'মিল/ফ্যাক্টরী',
+        bn: 'মটরের এম্পিয়ার ঠিক আছে কিনা',
+        en: 'Is the motor ampere okay?',
+        reasonPromptBn: 'মিলের মটরগুলোর এম্পিয়ার রিডিং ও কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['সকল মটর নেমপ্লেট রেটিং অনুযায়ী চলছে', 'প্যানেল অ্যামিটার রিডিং স্বাভাবিক', 'ওভারলোড রিলে সেটিংস ঠিক আছে']
+      },
+      {
+        id: 13,
+        numBn: '১৩',
+        category: 'mill',
+        categoryBn: 'মিল/ফ্যাক্টরী',
+        bn: 'মটর কানেকশনের ইলেকট্রিক্যাল ক্যাবল এর তাপমাত্রা ঠিক আছে কিনা',
+        en: 'Is the temperature of the motor connection electrical cable okay?',
+        reasonPromptBn: 'ক্যাবলের তাপমাত্রার অবস্থা ও কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['থার্মাল চেক স্বাভাবিক পাওয়া গেছে', 'ক্যাবল গ্ল্যান্ড ও লগ ঠান্ডা আছে', 'কোনো হটস্পট পাওয়া যায়নি']
+      },
+      {
+        id: 14,
+        numBn: '১৪',
+        category: 'mill',
+        categoryBn: 'মিল/ফ্যাক্টরী',
+        bn: 'মটর টার্মিনালে কোন লুজ কানেকশন আছে কিনা',
+        en: 'Is there any loose connection at the motor terminal?',
+        reasonPromptBn: 'কোন মটরের টার্মিনালে লুজ কানেকশন আছে এবং তার কারণ লিখুন (Declare Reason):',
+        quickReasons: ['ভাইব্রেশনের কারণে নাট ঢিলা হয়েছে', 'টার্মিনাল লগ স্পার্ক করেছে', 'রি-টাইট ও ক্লিনিং প্রয়োজন']
+      },
+      {
+        id: 15,
+        numBn: '১৫',
+        category: 'mill',
+        categoryBn: 'মিল/ফ্যাক্টরী',
+        bn: 'স্পেয়ার পার্টসের কারণে কোন মেশিন বন্ধ আছে কিনা',
+        en: 'Is any machine stopped due to spare parts?',
+        reasonPromptBn: 'হ্যাঁ হলে তার কারণ ও কোন স্পেয়ার পার্টস প্রয়োজন তা লিখুন (Declare Reason):',
+        quickReasons: ['ম্যাগনেটিক কন্টাক্টর প্রয়োজন', 'মটর বেয়ারিং স্টকে নেই', 'ভিএফডি (VFD) কার্ড রিপ্লেসমেন্ট প্রয়োজন', 'সেন্সর/লিমিট সুইচ অর্ডার করা হয়েছে']
+      },
+      {
+        id: 16,
+        numBn: '১৬',
+        category: 'mill',
+        categoryBn: 'মিল/ফ্যাক্টরী',
+        bn: 'প্লান্টের সব গুলো এসি ঠিক আছে কিনা',
+        en: 'Are all the ACs in the plant okay?',
+        reasonPromptBn: 'প্লান্টের এসিগুলোর অবস্থা ও কারণ উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['সকল কন্ট্রোল রুম ও প্লান্ট এসি সচল আছে', 'কুলিং ও ফিল্টার পরিষ্কার আছে', 'নির্দিষ্ট তাপমাত্রায় সেট করা আছে']
+      },
+
+      // জেনারেটর (Generator)
+      {
+        id: 17,
+        numBn: '১৭',
+        category: 'generator',
+        categoryBn: 'জেনারেটর',
+        bn: 'জেনারেটরের জন্য পর্যাপ্ত তেল মজুত আছে কিনা',
+        en: 'Is there sufficient fuel stocked for the generator?',
+        reasonPromptBn: 'বর্তমান তেল মজুতের পরিমাণ (লিটার) ও বিবরণ লিখুন (Declare Reason):',
+        quickReasons: ['ট্যাংক ৮০% পূর্ণ আছে', 'রিজার্ভ ড্রামে পর্যাপ্ত ডিজেল মজুত আছে', 'ফুয়েল গেজ চেক করা হয়েছে']
+      },
+      {
+        id: 18,
+        numBn: '১৮',
+        category: 'generator',
+        categoryBn: 'জেনারেটর',
+        bn: 'জেনারেটর রানিং আছে কিনা',
+        en: 'Is the generator running?',
+        reasonPromptBn: 'জেনারেটর রানিং থাকার কারণ ও লোড স্ট্যাটাস লিখুন (Declare Reason):',
+        quickReasons: ['লোড শেডিংয়ের কারণে ব্যাকআপ চলছে', 'পিক লোড শেয়ারিংয়ের জন্য চালু', 'রুটিন ট্রায়াল রানে চালু করা হয়েছে']
+      },
+
+      // ইলেকট্রিক্যাল ফল্ট ব্রেক ডাউন (Electrical Fault Breakdown)
+      {
+        id: 19,
+        numBn: '১৯',
+        category: 'breakdown',
+        categoryBn: 'ইলেকট্রিক্যাল ফল্ট ব্রেক ডাউন',
+        bn: 'ইলেকট্রিক্যাল ফল্ট ব্রেক ডাউন আছে কিনা',
+        en: 'Is there any electrical fault breakdown?',
+        hasHoursField: true,
+        hoursLabelBn: 'কত ঘন্টা ব্রেক ডাউন ছিলো-',
+        hoursLabelEn: 'How many hours was the breakdown?',
+        reasonPromptBn: 'ইলেকট্রিক্যাল ফল্ট ব্রেক ডাউনের কারণ ও গৃহীত ব্যবস্থা লিখুন (Declare Reason):',
+        quickReasons: ['মটর ট্রিপ ও ওভারলোড ফল্ট', 'কন্ট্রোল প্যানেল শর্ট সার্কিট', 'ফিডার ক্যাবল ফল্ট মেরামত', 'সেন্সর/পিএলসি ফল্ট']
+      },
+      {
+        id: 20,
+        numBn: '২০',
+        category: 'breakdown',
+        categoryBn: 'ইলেকট্রিক্যাল ফল্ট ব্রেক ডাউন',
+        bn: 'লোড শেডিং ছিলো কিনা',
+        en: 'Was there load shedding?',
+        hasHoursField: true,
+        hoursLabelBn: 'কত ঘন্টা লোড-শেডিং ছিলো-',
+        hoursLabelEn: 'How many hours was the load shedding?',
+        reasonPromptBn: 'লোড শেডিংয়ের সময়কাল ও কারণ/বিকল্প ব্যবস্থা উল্লেখ করুন (Declare Reason):',
+        quickReasons: ['নেসকো/পল্লী বিদ্যুৎ গ্রিড শাটডাউন', 'জেনারেটর দিয়ে প্লান্ট সচল রাখা হয়েছে', 'হাই-ভোল্টেজ লাইন মেইন্টেনেন্স']
+      }
+    ];
+
+    // ==================== APPLICATION STATE ====================
+    const STORAGE_KEY = 'nabil_electrical_checklist_records_v1';
+    const CURRENT_DRAFT_KEY = 'nabil_electrical_checklist_draft_v1';
+
+    let state = {
+      view: 'setup', // 'setup' | 'checklist' | 'history'
+      displayMode: 'all', // 'all' | 'wizard'
+      wizardIndex: 0, // 0..19
+      activeCategory: 'ALL',
+      showEnglish: true,
+      session: {
+        projectName: '',
+        shift: 'A (8am-8pm)',
+        date: getTodayIsoDate(),
+        employeeName: ''
+      },
+      answers: {}, // { [questionId]: { choice: 'YES' | 'NO' | null, reason: '', hours: '' } }
+      q21Remarks: '',
+      historyRecords: []
+    };
+
+    function getTodayIsoDate() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    function initBlankAnswers() {
+      const blank = {};
+      QUESTIONS.forEach((q) => {
+        blank[q.id] = {
+          choice: null,
+          reason: '',
+          hours: ''
+        };
+      });
+      state.answers = blank;
+      state.q21Remarks = '';
+    }
+
+    // ==================== SAFE LOCAL STORAGE ====================
+    function loadSavedState() {
+      initBlankAnswers();
+      try {
+        const rawHistory = localStorage.getItem(STORAGE_KEY);
+        if (rawHistory) {
+          const parsed = JSON.parse(rawHistory);
+          if (Array.isArray(parsed)) {
+            state.historyRecords = parsed;
+          }
+        }
+      } catch (e) {
+        state.historyRecords = [];
+      }
+
+      try {
+        const rawDraft = localStorage.getItem(CURRENT_DRAFT_KEY);
+        if (rawDraft) {
+          const draft = JSON.parse(rawDraft);
+          if (draft && draft.session) {
+            state.session = {
+              projectName: draft.session.projectName || '',
+              shift: draft.session.shift || 'A (8am-8pm)',
+              date: draft.session.date || getTodayIsoDate(),
+              employeeName: draft.session.employeeName || ''
+            };
+          }
+          if (draft && draft.answers) {
+            QUESTIONS.forEach((q) => {
+              if (draft.answers[q.id]) {
+                state.answers[q.id] = {
+                  choice: draft.answers[q.id].choice || null,
+                  reason: draft.answers[q.id].reason || '',
+                  hours: draft.answers[q.id].hours || ''
+                };
+              }
+            });
+          }
+          if (draft && typeof draft.q21Remarks === 'string') {
+            state.q21Remarks = draft.q21Remarks;
+          }
+        }
+      } catch (e) {
+        // ignore storage errors in restricted iframe
+      }
+    }
+
+    function saveDraftToStorage() {
+      try {
+        localStorage.setItem(
+          CURRENT_DRAFT_KEY,
+          JSON.stringify({
+            session: state.session,
+            answers: state.answers,
+            q21Remarks: state.q21Remarks
+          })
+        );
+      } catch (e) {
+        // ignore
+      }
+    }
+
+    function saveHistoryToStorage() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.historyRecords));
+      } catch (e) {
+        // ignore
+      }
+      updateHistoryBadge();
+    }
+
+    // ==================== UI HELPERS ====================
+    let toastTimer = null;
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const textEl = document.getElementById('toastText');
+      const iconEl = document.getElementById('toastIcon');
+      textEl.textContent = message;
+      iconEl.className =
+        type === 'success'
+          ? 'text-emerald-400'
+          : type === 'error'
+          ? 'text-red-400'
+          : 'text-amber-400';
+      container.classList.remove('hidden');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        container.classList.add('hidden');
+      }, 3200);
+    }
+
+    function updateHistoryBadge() {
+      const badge = document.getElementById('historyCountBadge');
+      if (badge) {
+        badge.textContent = String(state.historyRecords.length);
+      }
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    // ==================== NAVIGATION & VIEW SWITCHING ====================
+    function switchMainView(targetView) {
+      state.view = targetView;
+      const setupStepView = document.getElementById('setupStepView');
+      const checklistQuestionsView = document.getElementById('checklistQuestionsView');
+      const historyView = document.getElementById('historyView');
+
+      const navChecklistBtn = document.getElementById('navChecklistBtn');
+      const navHistoryBtn = document.getElementById('navHistoryBtn');
+
+      setupStepView.classList.add('hidden');
+      checklistQuestionsView.classList.add('hidden');
+      historyView.classList.add('hidden');
+
+      if (targetView === 'setup') {
+        setupStepView.classList.remove('hidden');
+        navChecklistBtn.className = 'px-3 py-1 rounded-md text-xs font-semibold bg-amber-500 text-slate-950 transition';
+        navHistoryBtn.className = 'px-3 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-white transition flex items-center gap-1';
+        syncSetupFormInputs();
+      } else if (targetView === 'checklist') {
+        checklistQuestionsView.classList.remove('hidden');
+        navChecklistBtn.className = 'px-3 py-1 rounded-md text-xs font-semibold bg-amber-500 text-slate-950 transition';
+        navHistoryBtn.className = 'px-3 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-white transition flex items-center gap-1';
+        renderChecklistSessionBanner();
+        renderCategoryFilterPills();
+        renderQuestionsList();
+      } else if (targetView === 'history') {
+        historyView.classList.remove('hidden');
+        navHistoryBtn.className = 'px-3 py-1 rounded-md text-xs font-semibold bg-amber-500 text-slate-950 transition flex items-center gap-1';
+        navChecklistBtn.className = 'px-3 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-white transition';
+        renderHistoryView();
+      }
+    }
+
+    // ==================== STEP 1: SETUP FORM ====================
+    function syncSetupFormInputs() {
+      document.getElementById('inputProjectName').value = state.session.projectName;
+      document.getElementById('inputCheckDate').value = state.session.date || getTodayIsoDate();
+      document.getElementById('inputEmployeeName').value = state.session.employeeName || '';
+      updateShiftSelectionUI(state.session.shift);
+    }
+
+    function updateShiftSelectionUI(selectedShift) {
+      state.session.shift = selectedShift;
+      const btnA = document.getElementById('shiftBtnA');
+      const btnB = document.getElementById('shiftBtnB');
+
+      if (selectedShift === 'A (8am-8pm)') {
+        btnA.className = 'shift-option-btn flex items-center gap-3 p-3.5 rounded-xl border-2 border-amber-500 bg-amber-50/70 text-left transition';
+        btnA.querySelector('div:first-child').className = 'w-9 h-9 rounded-lg bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0';
+        btnB.className = 'shift-option-btn flex items-center gap-3 p-3.5 rounded-xl border-2 border-slate-200 bg-white hover:bg-slate-50 text-left transition';
+        btnB.querySelector('div:first-child').className = 'w-9 h-9 rounded-lg bg-slate-200 text-slate-700 font-bold flex items-center justify-center shrink-0';
+      } else {
+        btnB.className = 'shift-option-btn flex items-center gap-3 p-3.5 rounded-xl border-2 border-amber-500 bg-amber-50/70 text-left transition';
+        btnB.querySelector('div:first-child').className = 'w-9 h-9 rounded-lg bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0';
+        btnA.className = 'shift-option-btn flex items-center gap-3 p-3.5 rounded-xl border-2 border-slate-200 bg-white hover:bg-slate-50 text-left transition';
+        btnA.querySelector('div:first-child').className = 'w-9 h-9 rounded-lg bg-slate-200 text-slate-700 font-bold flex items-center justify-center shrink-0';
+      }
+    }
+
+    // ==================== STEP 2: CHECKLIST RENDERING ====================
+    function renderChecklistSessionBanner() {
+      document.getElementById('bannerProjectName').textContent = state.session.projectName || '—';
+      document.getElementById('bannerShift').textContent = state.session.shift || '—';
+      document.getElementById('bannerDate').textContent = state.session.date || '—';
+      document.getElementById('inputQ21Remarks').value = state.q21Remarks || '';
+      updateProgressStats();
+    }
+
+    function updateProgressStats() {
+      let answeredCount = 0;
+      let yesCount = 0;
+      QUESTIONS.forEach((q) => {
+        const ans = state.answers[q.id];
+        if (ans && (ans.choice === 'YES' || ans.choice === 'NO')) {
+          answeredCount++;
+          if (ans.choice === 'YES') yesCount++;
+        }
+      });
+
+      const pct = Math.round((answeredCount / QUESTIONS.length) * 100);
+      document.getElementById('bannerProgressText').textContent = `${answeredCount} / ${QUESTIONS.length}`;
+      document.getElementById('bannerYesCountBadge').textContent = `হ্যাঁ: ${yesCount}`;
+      document.getElementById('progressBarFill').style.width = `${pct}%`;
+    }
+
+    function renderCategoryFilterPills() {
+      const bar = document.getElementById('categoryFilterBar');
+      if (state.displayMode === 'wizard') {
+        bar.classList.add('hidden');
+        return;
+      }
+      bar.classList.remove('hidden');
+
+      bar.innerHTML = CATEGORIES.map((cat) => {
+        const isActive = state.activeCategory === cat.id;
+        let countInCat = 0;
+        let answeredInCat = 0;
+        QUESTIONS.forEach((q) => {
+          if (cat.id === 'ALL' || q.category === cat.id) {
+            countInCat++;
+            if (state.answers[q.id] && state.answers[q.id].choice) {
+              answeredInCat++;
+            }
+          }
+        });
+
+        return `
+          <button
+            type="button"
+            data-cat-id="${cat.id}"
+            class="cat-filter-btn shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold border transition flex items-center gap-2 ${
+              isActive
+                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
+                : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+            }"
+          >
+            <span>${escapeHtml(cat.bn)}</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[10px] ${
+              isActive ? 'bg-amber-500 text-slate-950' : 'bg-slate-100 text-slate-600'
+            }">${answeredInCat}/${countInCat}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderQuestionsList() {
+      const container = document.getElementById('questionsListContainer');
+      const wizardBar = document.getElementById('wizardControlsBar');
+      const q21Box = document.getElementById('q21Container');
+
+      let questionsToRender = [];
+
+      if (state.displayMode === 'wizard') {
+        wizardBar.classList.remove('hidden');
+        // In wizard mode, step 0..19 are Q1..Q20, step 20 is Q21
+        if (state.wizardIndex < QUESTIONS.length) {
+          questionsToRender = [QUESTIONS[state.wizardIndex]];
+          q21Box.classList.add('hidden');
+        } else {
+          questionsToRender = [];
+          q21Box.classList.remove('hidden');
+        }
+        document.getElementById('wizardStepIndicator').textContent = `প্রশ্ন ${state.wizardIndex + 1} / 21`;
+        document.getElementById('btnPrevQuestion').disabled = state.wizardIndex === 0;
+        document.getElementById('btnNextQuestion').textContent =
+          state.wizardIndex >= 20 ? 'সম্পন্ন (Done)' : 'পরবর্তী প্রশ্ন (Next) →';
+      } else {
+        wizardBar.classList.add('hidden');
+        q21Box.classList.remove('hidden');
+        questionsToRender = QUESTIONS.filter(
+          (q) => state.activeCategory === 'ALL' || q.category === state.activeCategory
+        );
+      }
+
+      let currentCatHeader = '';
+      const htmlParts = [];
+
+      questionsToRender.forEach((q) => {
+        if (state.displayMode === 'all' && state.activeCategory === 'ALL' && q.categoryBn !== currentCatHeader) {
+          currentCatHeader = q.categoryBn;
+          const catObj = CATEGORIES.find((c) => c.id === q.category);
+          htmlParts.push(`
+            <div class="pt-3 pb-1 flex items-center justify-between border-b border-slate-200">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900">${escapeHtml(q.categoryBn)}</h3>
+                ${
+                  state.showEnglish && catObj
+                    ? `<span class="text-xs text-slate-500 font-medium">(${escapeHtml(catObj.en)})</span>`
+                    : ''
+                }
+              </div>
+              <span class="text-xs font-semibold text-slate-500">হ্যাঁ হলে কারণ উল্লেখ করুন</span>
+            </div>
+          `);
+        }
+
+        const ans = state.answers[q.id] || { choice: null, reason: '', hours: '' };
+        const isYes = ans.choice === 'YES';
+        const isNo = ans.choice === 'NO';
+        const needsReasonWarning = isYes && !ans.reason.trim();
+
+        htmlParts.push(`
+          <div id="question-card-${q.id}" class="bg-white rounded-2xl shadow-sm border transition ${
+            isYes
+              ? 'border-amber-400 ring-1 ring-amber-400/30'
+              : isNo
+              ? 'border-emerald-300'
+              : 'border-slate-200'
+          } p-4 sm:p-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded-xl font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 ${
+                  isYes
+                    ? 'bg-amber-500 text-slate-950'
+                    : isNo
+                    ? 'bg-emerald-600 text-white'
+                    : 'bg-slate-100 text-slate-700'
+                }">
+                  ${escapeHtml(q.numBn)}
+                </span>
+                <div>
+                  <div class="inline-flex items-center gap-1.5 mb-0.5">
+                    <span class="text-[11px] font-semibold text-slate-500">${escapeHtml(q.categoryBn)}</span>
+                  </div>
+                  <h4 class="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                    ${escapeHtml(q.bn)}
+                  </h4>
+                  ${
+                    state.showEnglish
+                      ? `<p class="text-xs text-slate-500 mt-0.5">${escapeHtml(q.en)}</p>`
+                      : ''
+                  }
+                </div>
+              </div>
+
+              <!-- Yes / No Buttons -->
+              <div class="flex items-center gap-2.5 shrink-0 self-end sm:self-center">
+                <button
+                  type="button"
+                  data-qid="${q.id}"
+                  data-choice="YES"
+                  class="choice-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm border-2 transition flex items-center gap-1.5 ${
+                    isYes
+                      ? 'bg-amber-500 border-amber-500 text-slate-950 shadow-sm'
+                      : 'bg-white border-slate-200 text-slate-700 hover:border-amber-400 hover:bg-amber-50/40'
+                  }"
+                >
+                  <span class="w-4 h-4 rounded border flex items-center justify-center text-[10px] ${
+                    isYes ? 'border-slate-950 bg-slate-950 text-amber-400' : 'border-slate-400'
+                  }">${isYes ? '✓' : ''}</span>
+                  <span>হ্যাঁ (Yes)</span>
+                </button>
+
+                <button
+                  type="button"
+                  data-qid="${q.id}"
+                  data-choice="NO"
+                  class="choice-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm border-2 transition flex items-center gap-1.5 ${
+                    isNo
+                      ? 'bg-emerald-600 border-emerald-600 text-white shadow-sm'
+                      : 'bg-white border-slate-200 text-slate-700 hover:border-emerald-400 hover:bg-emerald-50/40'
+                  }"
+                >
+                  <span class="w-4 h-4 rounded border flex items-center justify-center text-[10px] ${
+                    isNo ? 'border-white bg-white text-emerald-700' : 'border-slate-400'
+                  }">${isNo ? '✓' : ''}</span>
+                  <span>না (No)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CONDITIONAL REASON DECLARATION TAB (Opens automatically when YES is selected) -->
+            ${
+              isYes
+                ? `
+              <div class="mt-4 pt-4 border-t border-amber-200/80 bg-amber-50/60 -mx-4 -mb-4 sm:-mx-5 sm:-mb-5 p-4 sm:p-5 rounded-b-2xl reason-tab-enter">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 text-[11px] font-bold">
+                      কারণ ঘোষণার ট্যাব (Reason Declaration Tab)
+                    </span>
+                    <span class="text-xs font-bold text-slate-800">
+                      ${escapeHtml(q.reasonPromptBn)} <span class="text-red-600">*</span>
+                    </span>
+                  </div>
+                  ${
+                    needsReasonWarning
+                      ? `<span class="text-[11px] font-semibold text-red-600">কারণ লেখা আবশ্যক (Required for Yes)</span>`
+                      : `<span class="text-[11px] font-semibold text-emerald-700">✓ কারণ যুক্ত করা হয়েছে</span>`
+                  }
+                </div>
+
+                ${
+                  q.hasHoursField
+                    ? `
+                  <div class="mb-3 flex flex-wrap items-center gap-3 bg-white p-3 rounded-xl border border-amber-300">
+                    <label for="hours-input-${q.id}" class="text-xs sm:text-sm font-bold text-slate-800">
+                      ${escapeHtml(q.hoursLabelBn)}
+                      ${state.showEnglish ? `<span class="text-xs font-normal text-slate-500">(${escapeHtml(q.hoursLabelEn)})</span>` : ''}
+                    </label>
+                    <div class="flex items-center gap-2">
+                      <input
+                        id="hours-input-${q.id}"
+                        type="number"
+                        step="0.25"
+                        min="0"
+                        data-hours-qid="${q.id}"
+                        value="${escapeHtml(ans.hours)}"
+                        placeholder="0.0"
+                        class="hours-input w-28 px-3 py-1.5 rounded-lg border border-slate-300 focus:border-amber-500 outline-none text-sm font-bold text-slate-900"
+                      />
+                      <span class="text-xs sm:text-sm font-bold text-slate-700">ঘন্টা (Hours)</span>
+                    </div>
+                  </div>
+                `
+                    : ''
+                }
+
+                <textarea
+                  id="reason-input-${q.id}"
+                  data-reason-qid="${q.id}"
+                  rows="2"
+                  placeholder="এখানে কারণ বা বিস্তারিত বিবরণ লিখুন (Type the reason here)..."
+                  class="reason-textarea w-full px-3.5 py-2.5 rounded-xl border ${
+                    needsReasonWarning ? 'border-red-300 bg-white' : 'border-amber-300 bg-white'
+                  } focus:border-amber-600 focus:ring-2 focus:ring-amber-500/20 outline-none text-sm text-slate-900 transition"
+                >${escapeHtml(ans.reason)}</textarea>
+
+                <!-- Quick Reason Chips -->
+                <div class="mt-2 flex flex-wrap items-center gap-1.5">
+                  <span class="text-[11px] text-slate-500 font-medium mr-1">দ্রুত কারণ বাছাই:</span>
+                  ${(q.quickReasons || [])
+                    .map(
+                      (qr) => `
+                    <button
+                      type="button"
+                      data-quick-qid="${q.id}"
+                      data-quick-text="${escapeHtml(qr)}"
+                      class="quick-reason-chip px-2.5 py-1 rounded-lg bg-white hover:bg-amber-200/70 text-slate-700 border border-amber-300/80 text-[11px] font-medium transition"
+                    >
+                      + ${escapeHtml(qr)}
+                    </button>
+                  `
+                    )
+                    .join('')}
+                </div>
+              </div>
+            `
+                : ''
+            }
+
+            ${
+              isNo
+                ? `
+              <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-700">
+                <span>✓ "না (No)" নির্বাচন করা হয়েছে — কারণ উল্লেখ করার প্রয়োজন নেই।</span>
+              </div>
+            `
+                : ''
+            }
+          </div>
+        `);
+      });
+
+      container.innerHTML = htmlParts.join('');
+    }
+
+    // ====================PRINT / OFFICIAL REPORT MODAL ====================
+    function buildPrintableReportHtml(record) {
+      let lastCategoryBn = '';
+      const rowsHtml = [];
+
+      QUESTIONS.forEach((q) => {
+        if (q.categoryBn !== lastCategoryBn) {
+          lastCategoryBn = q.categoryBn;
+          rowsHtml.push(`
+            <tr class="bg-slate-100 border-b border-slate-400">
+              <td colspan="5" class="py-1 px-2.5 text-[11px] font-bold text-slate-900">
+                ▸ ${escapeHtml(q.categoryBn)}
+              </td>
+            </tr>
+          `);
+        }
+
+        const ans = (record.answers && record.answers[q.id]) || { choice: null, reason: '', hours: '' };
+        const isYes = ans.choice === 'YES';
+        const isNo = ans.choice === 'NO';
+
+        let extraHoursText = '';
+        if (q.hasHoursField && (ans.hours || isYes)) {
+          extraHoursText = `<span class="ml-2 text-[11px] font-semibold text-slate-800">(${escapeHtml(q.hoursLabelBn)} <span class="inline-block border border-slate-800 px-1.5 py-0 rounded font-bold">${escapeHtml(ans.hours || '০')}</span> ঘন্টা)</span>`;
+        }
+
+        rowsHtml.push(`
+          <tr class="border-b border-slate-300">
+            <td class="py-1 px-2 text-xs font-bold text-slate-800 w-9 text-center border-r border-slate-300">${escapeHtml(q.numBn)}</td>
+            <td class="py-1 px-2.5 text-xs text-slate-900 border-r border-slate-300">
+              <span class="font-semibold">${escapeHtml(q.bn)}</span>${extraHoursText}
+            </td>
+            <td class="py-1 px-1.5 text-center w-16 border-r border-slate-300 whitespace-nowrap">
+              <span class="print-checkbox-box inline-flex items-center justify-center w-4 h-4 rounded border ${
+                isYes ? 'print-checkbox-checked border-2 border-slate-950 font-extrabold text-slate-950 bg-slate-200' : 'print-checkbox-unchecked border-slate-400 text-transparent'
+              }">✓</span>
+              <span class="text-[11px] ml-0.5 font-medium">হ্যাঁ</span>
+            </td>
+            <td class="py-1 px-1.5 text-center w-16 border-r border-slate-300 whitespace-nowrap">
+              <span class="print-checkbox-box inline-flex items-center justify-center w-4 h-4 rounded border ${
+                isNo ? 'print-checkbox-checked border-2 border-slate-950 font-extrabold text-slate-950 bg-slate-200' : 'print-checkbox-unchecked border-slate-400 text-transparent'
+              }">✓</span>
+              <span class="text-[11px] ml-0.5 font-medium">না</span>
+            </td>
+            <td class="py-1 px-2.5 text-xs text-slate-900 w-[30%]">
+              ${isYes ? `<span class="font-semibold">${escapeHtml(ans.reason || '—')}</span>` : '<span class="text-slate-400">—</span>'}
+            </td>
+          </tr>
+        `);
+      });
+
+      return `
+        <div class="print-one-page-box border-2 border-slate-800 p-4 rounded-lg bg-white">
+          <div class="print-header-block text-center border-b-2 border-slate-800 pb-2 mb-2.5">
+            <h2 class="print-header-title text-lg font-bold text-slate-950 leading-tight">নাবিল ইন্ডাস্ট্রিয়াল পার্ক</h2>
+            <p class="print-header-sub text-[11px] font-medium text-slate-700 leading-tight">ভেড়াপোড়া, পবা, রাজশাহী</p>
+            <div class="print-header-badge inline-block mt-1 px-3 py-0.5 border-2 border-slate-900 bg-slate-100 text-slate-950 text-xs font-extrabold rounded">
+              ইলেকট্রিক্যাল মেইন্টেনেন্স চেক লিস্ট
+            </div>
+          </div>
+
+          <div class="print-meta-row grid grid-cols-3 gap-2 text-xs font-semibold mb-2.5 pb-2 border-b border-slate-300">
+            <div>প্রজেক্টের নাম: <span class="font-bold underline">${escapeHtml(record.session.projectName || '—')}</span></div>
+            <div class="text-center">শিফট: <span class="font-bold underline">${escapeHtml(record.session.shift || '—')}</span></div>
+            <div class="text-right">তারিখঃ <span class="font-bold underline">${escapeHtml(record.session.date || '—')}</span></div>
+          </div>
+
+          <table class="print-compact-table w-full border-collapse border border-slate-400 text-left">
+            <thead>
+              <tr class="bg-slate-100 border-b-2 border-slate-400 text-xs font-bold text-slate-900">
+                <th class="py-1.5 px-2 border-r border-slate-300 w-9 text-center">ক্রমিক</th>
+                <th class="py-1.5 px-2.5 border-r border-slate-300">বিবরণ (Checklist Item)</th>
+                <th class="py-1.5 px-1.5 border-r border-slate-300 text-center w-16">হ্যাঁ</th>
+                <th class="py-1.5 px-1.5 border-r border-slate-300 text-center w-16">না</th>
+                <th class="py-1.5 px-2.5 w-[30%]">হ্যাঁ হলে / ঠিক না থাকলে তার কারণ</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rowsHtml.join('')}
+            </tbody>
+          </table>
+
+          <div class="print-q21-box mt-2 p-2 border border-slate-400 rounded bg-slate-50 text-xs flex items-start gap-2">
+            <span class="font-bold shrink-0">২১. অন্যান্য কোন সমস্যা থাকলে লিখুনঃ</span>
+            <span class="text-slate-900 font-medium">${escapeHtml(record.q21Remarks || 'কোনো অতিরিক্ত সমস্যা উল্লেখ করা হয়নি।')}</span>
+          </div>
+
+          <div class="print-footer-row mt-3 pt-2 border-t border-slate-300 flex items-center justify-between text-xs text-slate-700">
+            <div>দায়িত্বপ্রাপ্ত কর্মচারী: <span class="font-bold text-slate-900">${escapeHtml(record.session.employeeName || '________________')}</span></div>
+            <div>ইলেকট্রিক্যাল ইঞ্জিনিয়ার / সুপারভাইজার স্বাক্ষর: ______________________</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function openReportModal(recordData) {
+      const overlay = document.getElementById('reportModalOverlay');
+      const body = document.getElementById('printableReportBody');
+      body.innerHTML = buildPrintableReportHtml(recordData);
+      overlay.classList.remove('hidden');
+    }
+
+    // ==================== VALIDATION & SUBMISSION ====================
+    function validateChecklistBeforeSave() {
+      const banner = document.getElementById('checklistValidationBanner');
+      const unanswered = [];
+      const missingReasons = [];
+
+      QUESTIONS.forEach((q) => {
+        const ans = state.answers[q.id];
+        if (!ans || !ans.choice) {
+          unanswered.push(q.numBn);
+        } else if (ans.choice === 'YES' && !ans.reason.trim()) {
+          missingReasons.push(q);
+        }
+      });
+
+      if (missingReasons.length > 0) {
+        const firstMissing = missingReasons[0];
+        banner.innerHTML = `
+          <div class="font-bold mb-1">কারণ উল্লেখ করা হয়নি (Reason Declaration Required):</div>
+          <div>প্রশ্ন নং <strong>${missingReasons.map((m) => m.numBn).join(', ')}</strong>-এ আপনি "হ্যাঁ (Yes)" নির্বাচন করেছেন, তাই কারণ ট্যাবে কারণ উল্লেখ করা বাধ্যতামূলক।</div>
+        `;
+        banner.classList.remove('hidden');
+
+        if (state.displayMode === 'wizard') {
+          state.wizardIndex = QUESTIONS.findIndex((q) => q.id === firstMissing.id);
+          renderQuestionsList();
+        } else {
+          state.activeCategory = 'ALL';
+          renderCategoryFilterPills();
+          renderQuestionsList();
+          const cardEl = document.getElementById(`question-card-${firstMissing.id}`);
+          if (cardEl) cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        showToast(`প্রশ্ন ${firstMissing.numBn}-এর কারণ লিখুন`, 'error');
+        return false;
+      }
+
+      if (unanswered.length > 0) {
+        banner.innerHTML = `
+          <div class="font-bold mb-1">অসম্পূর্ণ চেকলিস্ট (${unanswered.length}টি প্রশ্ন বাকি):</div>
+          <div>অনুগ্রহ করে প্রশ্ন নং <strong>${unanswered.join(', ')}</strong>-এ "হ্যাঁ" অথবা "না" নির্বাচন করুন।</div>
+        `;
+        banner.classList.remove('hidden');
+        showToast(`আরও ${unanswered.length}টি প্রশ্নের উত্তর বাকি আছে`, 'error');
+        return false;
+      }
+
+      banner.classList.add('hidden');
+      return true;
+    }
+
+    function saveCurrentChecklistRecord() {
+      if (!validateChecklistBeforeSave()) return;
+
+      const yesItems = QUESTIONS.filter((q) => state.answers[q.id]?.choice === 'YES').length;
+      const newRecord = {
+        id: 'REC-' + Date.now(),
+        savedAt: new Date().toLocaleString('bn-BD'),
+        session: { ...state.session },
+        answers: JSON.parse(JSON.stringify(state.answers)),
+        q21Remarks: state.q21Remarks,
+        yesCount: yesItems,
+        noCount: QUESTIONS.length - yesItems
+      };
+
+      state.historyRecords.unshift(newRecord);
+      saveHistoryToStorage();
+      showToast('দৈনিক চেকলিস্ট সফলভাবে সংরক্ষিত হয়েছে!', 'success');
+      openReportModal(newRecord);
+    }
+
+    // ==================== VIEW 3: HISTORY RENDERING & EXPORT ====================
+    function renderHistoryView() {
+      const container = document.getElementById('historyRecordsList');
+      const projFilter = (document.getElementById('filterHistoryProject').value || '').trim().toLowerCase();
+      const shiftFilter = document.getElementById('filterHistoryShift').value;
+      const dateFilter = document.getElementById('filterHistoryDate').value;
+
+      const filtered = state.historyRecords.filter((rec) => {
+        const matchProj = !projFilter || (rec.session.projectName || '').toLowerCase().includes(projFilter);
+        const matchShift = shiftFilter === 'ALL' || rec.session.shift === shiftFilter;
+        const matchDate = !dateFilter || rec.session.date === dateFilter;
+        return matchProj && matchShift && matchDate;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 px-4 rounded-2xl border border-dashed border-slate-300 bg-slate-50">
+            <div class="text-sm font-bold text-slate-700">কোনো সংরক্ষিত চেকলিস্ট রেকর্ড পাওয়া যায়নি</div>
+            <p class="text-xs text-slate-500 mt-1">চেকলিস্ট পূরণ করে "চেকলিস্ট সংরক্ষণ করুন" বাটনে ক্লিক করলে প্রতিদিনের রেকর্ড এখানে জমা হবে।</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered
+        .map((rec) => {
+          const yesQuestions = QUESTIONS.filter((q) => rec.answers && rec.answers[q.id]?.choice === 'YES');
+          return `
+            <div class="p-4 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 transition shadow-sm">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-base font-bold text-slate-900">${escapeHtml(rec.session.projectName)}</span>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900">${escapeHtml(rec.session.shift)}</span>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">তারিখ: ${escapeHtml(rec.session.date)}</span>
+                  </div>
+                  <div class="text-xs text-slate-500 mt-1">
+                    কর্মচারী: ${escapeHtml(rec.session.employeeName || 'উল্লেখ নেই')} • সংরক্ষণের সময়: ${escapeHtml(rec.savedAt || '')}
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">
+                    হ্যাঁ (কারণসহ): ${rec.yesCount}
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
+                    না: ${rec.noCount}
+                  </span>
+                  <button
+                    type="button"
+                    data-view-rec-id="${rec.id}"
+                    class="view-record-btn px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition"
+                  >
+                    পূর্ণ রিপোর্ট দেখুন
+                  </button>
+                  <button
+                    type="button"
+                    data-delete-rec-id="${rec.id}"
+                    class="delete-record-btn px-2.5 py-1.5 rounded-xl border border-red-200 hover:bg-red-50 text-red-600 text-xs font-semibold transition"
+                  >
+                    মুছুন
+                  </button>
+                </div>
+              </div>
+
+              ${
+                yesQuestions.length > 0
+                  ? `
+                <div class="mt-3 pt-3 border-t border-slate-100">
+                  <div class="text-xs font-bold text-slate-700 mb-1.5">উল্লেখিত কারণসমূহ (Declared Reasons for "Yes"):</div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    ${yesQuestions
+                      .map((q) => {
+                        const a = rec.answers[q.id];
+                        return `
+                          <div class="p-2 rounded-lg bg-amber-50/70 border border-amber-200/80 text-xs">
+                            <span class="font-bold text-slate-900">${escapeHtml(q.numBn)}. ${escapeHtml(q.bn)}:</span>
+                            <span class="text-slate-800 ml-1">${escapeHtml(a.reason)}</span>
+                            ${a.hours ? `<span class="font-bold text-amber-900 ml-1">(${escapeHtml(a.hours)} ঘন্টা)</span>` : ''}
+                          </div>
+                        `;
+                      })
+                      .join('')}
+                  </div>
+                </div>
+              `
+                  : ''
+              }
+            </div>
+          `;
+        })
+        .join('');
+    }
+
+    function exportHistoryToCsv() {
+      if (state.historyRecords.length === 0) {
+        showToast('ডাউনলোড করার মতো কোনো রেকর্ড নেই', 'error');
+        return;
+      }
+
+      const headers = ['Date', 'Project Name', 'Shift', 'Employee', 'Question No', 'Category', 'Question', 'Decision', 'Declared Reason', 'Hours', 'Other Remarks (Q21)'];
+      const rows = [headers];
+
+      state.historyRecords.forEach((rec) => {
+        QUESTIONS.forEach((q) => {
+          const ans = (rec.answers && rec.answers[q.id]) || { choice: '', reason: '', hours: '' };
+          rows.push([
+            rec.session.date || '',
+            rec.session.projectName || '',
+            rec.session.shift || '',
+            rec.session.employeeName || '',
+            q.id,
+            q.categoryBn,
+            q.bn,
+            ans.choice === 'YES' ? 'হ্যাঁ (Yes)' : ans.choice === 'NO' ? 'না (No)' : '',
+            ans.choice === 'YES' ? ans.reason || '' : '',
+            ans.hours || '',
+            rec.q21Remarks || ''
+          ]);
+        });
+      });
+
+      const csvContent =
+        '\uFEFF' +
+        rows
+          .map((r) =>
+            r.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(',')
+          )
+          .join('\n');
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `nabil_electrical_checklist_${getTodayIsoDate()}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('CSV ফাইল ডাউনলোড সম্পন্ন হয়েছে', 'success');
+    }
+
+    // ==================== EVENT LISTENERS ====================
+    window.addEventListener('DOMContentLoaded', () => {
+      loadSavedState();
+      syncSetupFormInputs();
+      updateHistoryBadge();
+
+      // Header Language Toggle
+      document.getElementById('btnLangToggle').addEventListener('click', () => {
+        state.showEnglish = !state.showEnglish;
+        document.getElementById('btnLangToggle').textContent = state.showEnglish
+          ? 'ভাষা: বাংলা + EN'
+          : 'ভাষা: শুধু বাংলা';
+        if (state.view === 'checklist') {
+          renderQuestionsList();
+        }
+      });
+
+      // Header Main Navigation
+      document.getElementById('navChecklistBtn').addEventListener('click', () => {
+        if (state.session.projectName.trim()) {
+          switchMainView('checklist');
+        } else {
+          switchMainView('setup');
+        }
+      });
+
+      document.getElementById('navHistoryBtn').addEventListener('click', () => {
+        switchMainView('history');
+      });
+
+      // Setup Form: Quick Project Chips
+      document.getElementById('projectPresetContainer').addEventListener('click', (e) => {
+        const chip = e.target.closest('.project-chip');
+        if (!chip) return;
+        const proj = chip.getAttribute('data-project');
+        document.getElementById('inputProjectName').value = proj;
+        state.session.projectName = proj;
+      });
+
+      // Setup Form: Shift Selection Buttons
+      document.getElementById('shiftBtnA').addEventListener('click', () => {
+        updateShiftSelectionUI('A (8am-8pm)');
+      });
+      document.getElementById('shiftBtnB').addEventListener('click', () => {
+        updateShiftSelectionUI('B (8pm-8am)');
+      });
+
+      // Setup Form Submit -> Proceed to Checklist Questions
+      document.getElementById('setupForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const projectName = document.getElementById('inputProjectName').value.trim();
+        const checkDate = document.getElementById('inputCheckDate').value;
+        const empName = document.getElementById('inputEmployeeName').value.trim();
+        const errEl = document.getElementById('setupErrorMsg');
+
+        if (!projectName || !checkDate) {
+          errEl.textContent = 'অনুগ্রহ করে প্রজেক্টের নাম এবং তারিখ পূরণ করুন।';
+          errEl.classList.remove('hidden');
+          return;
+        }
+        errEl.classList.add('hidden');
+
+        state.session.projectName = projectName;
+        state.session.date = checkDate;
+        state.session.employeeName = empName;
+        saveDraftToStorage();
+        switchMainView('checklist');
+        showToast('চেকলিস্ট শুরু হয়েছে — প্রতিটি প্রশ্নের উত্তর দিন', 'success');
+      });
+
+      // Edit Session Info Button
+      document.getElementById('btnEditSessionInfo').addEventListener('click', () => {
+        switchMainView('setup');
+      });
+
+      // Reset Daily Form Button for a new day/shift
+      document.getElementById('btnResetDailyForm').addEventListener('click', () => {
+        initBlankAnswers();
+        state.session.date = getTodayIsoDate();
+        state.wizardIndex = 0;
+        saveDraftToStorage();
+        switchMainView('setup');
+        showToast('নতুন দিনের জন্য ফর্ম রিসেট করা হয়েছে', 'info');
+      });
+
+      // Display Mode Toggle (All vs Step-by-Step Wizard)
+      document.getElementById('modeAllBtn').addEventListener('click', () => {
+        state.displayMode = 'all';
+        document.getElementById('modeAllBtn').className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-slate-900 shadow-sm transition';
+        document.getElementById('modeWizardBtn').className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900 transition';
+        renderCategoryFilterPills();
+        renderQuestionsList();
+      });
+
+      document.getElementById('modeWizardBtn').addEventListener('click', () => {
+        state.displayMode = 'wizard';
+        state.wizardIndex = 0;
+        document.getElementById('modeWizardBtn').className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-slate-900 shadow-sm transition';
+        document.getElementById('modeAllBtn').className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900 transition';
+        renderCategoryFilterPills();
+        renderQuestionsList();
+      });
+
+      // Wizard Prev / Next Buttons
+      document.getElementById('btnPrevQuestion').addEventListener('click', () => {
+        if (state.wizardIndex > 0) {
+          state.wizardIndex--;
+          renderQuestionsList();
+        }
+      });
+
+      document.getElementById('btnNextQuestion').addEventListener('click', () => {
+        if (state.wizardIndex < 20) {
+          state.wizardIndex++;
+          renderQuestionsList();
+        } else {
+          saveCurrentChecklistRecord();
+        }
+      });
+
+      // Category Filter Bar Delegation
+      document.getElementById('categoryFilterBar').addEventListener('click', (e) => {
+        const btn = e.target.closest('.cat-filter-btn');
+        if (!btn) return;
+        state.activeCategory = btn.getAttribute('data-cat-id');
+        renderCategoryFilterPills();
+        renderQuestionsList();
+      });
+
+      // Questions List Event Delegation (Yes/No Clicks & Quick Reason Chips)
+      const qListContainer = document.getElementById('questionsListContainer');
+
+      qListContainer.addEventListener('click', (e) => {
+        // 1. Yes / No Choice Button
+        const choiceBtn = e.target.closest('.choice-btn');
+        if (choiceBtn) {
+          const qid = Number(choiceBtn.getAttribute('data-qid'));
+          const choice = choiceBtn.getAttribute('data-choice'); // 'YES' | 'NO'
+          if (!state.answers[qid]) {
+            state.answers[qid] = { choice: null, reason: '', hours: '' };
+          }
+          state.answers[qid].choice = choice;
+
+          // When NO is chosen, reason is not required
+          saveDraftToStorage();
+          updateProgressStats();
+          renderCategoryFilterPills();
+          renderQuestionsList();
+
+          if (choice === 'YES') {
+            const reasonEl = document.getElementById(`reason-input-${qid}`);
+            if (reasonEl) reasonEl.focus();
+          }
+          return;
+        }
+
+        // 2. Quick Reason Chip
+        const quickChip = e.target.closest('.quick-reason-chip');
+        if (quickChip) {
+          const qid = Number(quickChip.getAttribute('data-quick-qid'));
+          const text = quickChip.getAttribute('data-quick-text') || '';
+          if (!state.answers[qid]) {
+            state.answers[qid] = { choice: 'YES', reason: '', hours: '' };
+          }
+          const current = state.answers[qid].reason.trim();
+          state.answers[qid].reason = current ? `${current}; ${text}` : text;
+          saveDraftToStorage();
+          renderQuestionsList();
+          return;
+        }
+      });
+
+      // Live typing in Reason Textarea & Hours Input
+      qListContainer.addEventListener('input', (e) => {
+        if (e.target.classList.contains('reason-textarea')) {
+          const qid = Number(e.target.getAttribute('data-reason-qid'));
+          if (state.answers[qid]) {
+            state.answers[qid].reason = e.target.value;
+            saveDraftToStorage();
+          }
+        } else if (e.target.classList.contains('hours-input')) {
+          const qid = Number(e.target.getAttribute('data-hours-qid'));
+          if (state.answers[qid]) {
+            state.answers[qid].hours = e.target.value;
+            saveDraftToStorage();
+          }
+        }
+      });
+
+      // Q21 Remarks Input
+      document.getElementById('inputQ21Remarks').addEventListener('input', (e) => {
+        state.q21Remarks = e.target.value;
+        saveDraftToStorage();
+      });
+
+      // Preview Official Report Button
+      document.getElementById('btnPreviewReport').addEventListener('click', () => {
+        openReportModal({
+          session: { ...state.session },
+          answers: state.answers,
+          q21Remarks: state.q21Remarks
+        });
+      });
+
+      // Save Daily Checklist Button
+      document.getElementById('btnSubmitDailyChecklist').addEventListener('click', () => {
+        saveCurrentChecklistRecord();
+      });
+
+      // Modal Print & Close
+      document.getElementById('btnPrintSheet').addEventListener('click', () => {
+        window.print();
+      });
+      document.getElementById('btnCloseReportModal').addEventListener('click', () => {
+        document.getElementById('reportModalOverlay').classList.add('hidden');
+      });
+
+      // History View Filters & Actions
+      document.getElementById('filterHistoryProject').addEventListener('input', renderHistoryView);
+      document.getElementById('filterHistoryShift').addEventListener('change', renderHistoryView);
+      document.getElementById('filterHistoryDate').addEventListener('input', renderHistoryView);
+
+      document.getElementById('btnExportCsv').addEventListener('click', exportHistoryToCsv);
+      document.getElementById('btnStartNewFromHistory').addEventListener('click', () => {
+        initBlankAnswers();
+        state.session.date = getTodayIsoDate();
+        saveDraftToStorage();
+        switchMainView('setup');
+      });
+
+      document.getElementById('historyRecordsList').addEventListener('click', (e) => {
+        const viewBtn = e.target.closest('.view-record-btn');
+        if (viewBtn) {
+          const recId = viewBtn.getAttribute('data-view-rec-id');
+          const rec = state.historyRecords.find((r) => r.id === recId);
+          if (rec) openReportModal(rec);
+          return;
+        }
+
+        const delBtn = e.target.closest('.delete-record-btn');
+        if (delBtn) {
+          const recId = delBtn.getAttribute('data-delete-rec-id');
+          state.historyRecords = state.historyRecords.filter((r) => r.id !== recId);
+          saveHistoryToStorage();
+          renderHistoryView();
+          showToast('রেকর্ড মুছে ফেলা হয়েছে', 'info');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
